@@ -1,0 +1,147 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Field wrapper ────────────────────────────────────────────── */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.required {
+  color: #f87171;
+  margin-left: 2px;
+}
+
+/* ── Two-column layout ────────────────────────────────────────── */
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── Inputs ───────────────────────────────────────────────────── */
+
+.input,
+.textarea,
+.select {
+  background-color: #0f0f13;
+  border: 1px solid #2d2d45;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-family: inherit;
+  padding: 9px 12px;
+  width: 100%;
+  transition: border-color 0.15s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #334155;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: #818cf8;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23475569' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+/* Date input calendar icon colour (best-effort, webkit only) */
+.input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.4);
+  cursor: pointer;
+}
+
+.inputError {
+  border-color: #f87171;
+}
+
+.errorMsg {
+  font-size: 0.75rem;
+  color: #f87171;
+  margin-top: 2px;
+}
+
+/* ── Form action buttons ──────────────────────────────────────── */
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.btnPrimary {
+  background-color: #818cf8;
+  color: #0f0f13;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background-color: #6366f1;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #64748b;
+  border: 1px solid #1e1e2e;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.btnSecondary:hover:not(:disabled) {
+  border-color: #2d2d45;
+  color: #94a3b8;
+}
+
+.btnSecondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,298 @@
+.settingCard {
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.settingRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.settingInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.settingLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.settingDesc {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ── Status pill ─────────────────────────────────────────────────── */
+
+.statusPill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.statusPillActive {
+  background-color: #172a1a;
+  color: #4ade80;
+}
+
+.statusPillMissing {
+  background-color: #1e1e2e;
+  color: #475569;
+}
+
+/* ── Banners ─────────────────────────────────────────────────────── */
+
+.settingBanner {
+  font-size: 0.8rem;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.settingBanner[data-variant="error"] {
+  background-color: #2a1018;
+  border: 1px solid #7f1d1d;
+  color: #f87171;
+}
+
+.settingBanner[data-variant="success"] {
+  background-color: #172a1a;
+  border: 1px solid #166534;
+  color: #4ade80;
+}
+
+/* ── Key input row ───────────────────────────────────────────────── */
+
+.keyInputRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.keyInput {
+  flex: 1;
+  background-color: #0f0f13;
+  border: 1px solid #2d2d45;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-family: monospace;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.15s ease;
+  min-width: 0;
+}
+
+.keyInput::placeholder {
+  color: #334155;
+  font-family: inherit;
+}
+
+.keyInput:focus {
+  border-color: #818cf8;
+}
+
+.btnSave {
+  background-color: #818cf8;
+  color: #0f0f13;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btnSave:hover:not(:disabled) {
+  background-color: #6366f1;
+}
+
+.btnSave:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnClear {
+  background: transparent;
+  border: 1px solid #3d1420;
+  color: #f87171;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btnClear:hover:not(:disabled) {
+  background-color: #2a1018;
+}
+
+.btnClear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Hint text ───────────────────────────────────────────────────── */
+
+.settingHint {
+  font-size: 0.72rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+/* ── Personalization controls (Module 7) ─────────────────────────── */
+
+.prefRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.prefRow + .prefRow {
+  border-top: 1px solid #1e1e2e;
+  padding-top: 14px;
+}
+
+.prefSelect {
+  background-color: #0f0f13;
+  border: 1px solid #2d2d45;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-family: inherit;
+  padding: 7px 12px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.prefSelect:focus {
+  border-color: var(--accent, #818cf8);
+}
+
+.swatchRow {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.1s ease, border-color 0.15s ease;
+}
+
+.swatch:hover {
+  transform: scale(1.1);
+}
+
+.swatchActive {
+  border-color: #e2e8f0;
+}
+
+/* ── Data section: inline clear-all confirmation (Module 9) ──────── */
+
+.confirmInline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.confirmPrompt {
+  font-size: 0.78rem;
+  color: #f87171;
+  white-space: nowrap;
+}
+
+.btnSecondary {
+  background: transparent;
+  border: 1px solid #2d2d45;
+  color: #94a3b8;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.btnSecondary:hover:not(:disabled) {
+  border-color: #475569;
+  color: #cbd5e1;
+}
+
+.btnSecondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Import block (v0.2 M3) ──────────────────────────────────────── */
+
+.importBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #1e1e2e;
+  padding-top: 14px;
+}
+
+.importArea {
+  background-color: #0f0f13;
+  border: 1px solid #2d2d45;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-family: monospace;
+  font-size: 0.78rem;
+  padding: 10px 12px;
+  width: 100%;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.importArea::placeholder {
+  color: #334155;
+}
+
+.importArea:focus {
+  border-color: var(--accent, #818cf8);
+}
+
+.importArea:disabled {
+  opacity: 0.6;
+}
+
+.importActions {
+  display: flex;
+  justify-content: flex-end;
+}

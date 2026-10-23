@@ -1,0 +1,65 @@
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchInput {
+  flex: 1;
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-family: inherit;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.15s ease;
+  min-width: 0;
+}
+
+.searchInput::placeholder {
+  color: #334155;
+}
+
+.searchInput:focus {
+  border-color: #818cf8;
+}
+
+.btnNew {
+  background-color: #818cf8;
+  color: #0f0f13;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.btnNew:hover {
+  background-color: #6366f1;
+}
+
+.btnNewEmpty {
+  background: transparent;
+  border: 1px dashed #334155;
+  color: #64748b;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  margin-top: 4px;
+}
+
+.btnNewEmpty:hover {
+  border-color: #818cf8;
+  color: #818cf8;
+}

@@ -1,0 +1,135 @@
+.banner {
+  background-color: #13131a;
+  border-bottom: 1px solid #1e1e2e;
+  padding: 12px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bell {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.summary {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  text-transform: capitalize;
+}
+
+.dismissAll {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 0.72rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.dismissAll:hover {
+  background-color: #1e1e2e;
+  color: #cbd5e1;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dotOverdue {
+  background-color: #f87171;
+}
+
+.dotToday {
+  background-color: #fbbf24;
+}
+
+.message {
+  flex: 1;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  cursor: pointer;
+  padding: 2px 0;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message:hover {
+  color: #cbd5e1;
+}
+
+.dismissOne {
+  background: transparent;
+  border: none;
+  color: #475569;
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.dismissOne:hover {
+  background-color: #1e1e2e;
+  color: #cbd5e1;
+}
+
+.more {
+  font-size: 0.72rem;
+  color: #475569;
+  margin: 0;
+}
+
+.snoozeOne {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.snoozeOne:hover {
+  background-color: #1e1e2e;
+  color: #cbd5e1;
+}

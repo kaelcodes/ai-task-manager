@@ -1,0 +1,184 @@
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 36px;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+.header {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Placeholder card grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #475569;
+}
+
+.cardValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  line-height: 1;
+}
+
+.cardNote {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Empty state */
+.emptyState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #475569;
+  padding: 60px 0;
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.emptyText {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Section */
+.section {
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+/* Placeholder list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listItem {
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.listItemDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #818cf8;
+  flex-shrink: 0;
+}
+
+.listItemDotMuted {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #334155;
+  flex-shrink: 0;
+}
+
+.badge {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background-color: #1e1e38;
+  color: #818cf8;
+}
+
+/* ── Toolbar ────────────────────────────────────────────────────── */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* ── Error banner ───────────────────────────────────────────────── */
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: #2a1018;
+  border: 1px solid #7f1d1d;
+  border-radius: 8px;
+  color: #f87171;
+  font-size: 0.875rem;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.errorDismiss {
+  background: transparent;
+  border: none;
+  color: #f87171;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease;
+}
+
+.errorDismiss:hover {
+  background-color: #3d1420;
+}

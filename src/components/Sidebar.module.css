@@ -1,0 +1,87 @@
+.sidebar {
+  width: 220px;
+  min-width: 220px;
+  height: 100vh;
+  background-color: #13131a;
+  border-right: 1px solid #1e1e2e;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 12px;
+  gap: 32px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px;
+}
+
+.logoIcon {
+  font-size: 1.3rem;
+  color: var(--accent, #818cf8);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #f1f5f9;
+  white-space: nowrap;
+}
+
+/* Nav list */
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Nav item button */
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navItem:hover {
+  background-color: #1e1e2e;
+  color: #cbd5e1;
+}
+
+.navItemActive {
+  background-color: #1e1e38;
+  color: var(--accent, #818cf8);
+}
+
+.navItemActive:hover {
+  background-color: #1e1e38;
+  color: var(--accent, #818cf8);
+}
+
+.navIcon {
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 18px;
+  text-align: center;
+}
+
+.navLabel {
+  line-height: 1;
+}

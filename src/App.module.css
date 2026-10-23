@@ -1,0 +1,132 @@
+.shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0f0f13;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* ── Mobile-only chrome: hidden on desktop by default ───────────────────────── */
+
+.mobileHeader {
+  display: none;
+}
+
+.backdrop {
+  display: none;
+}
+
+.drawer {
+  /* On desktop the drawer is never shown; the persistent sidebar is used. */
+  display: none;
+}
+
+/* ── Desktop sidebar (default visible) ──────────────────────────────────────── */
+
+.desktopSidebar {
+  /* No override needed on desktop; the base .sidebar styles apply. */
+}
+
+/* ── Responsive: tablet / mobile ────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Hide the persistent sidebar; navigation moves into the drawer. */
+  .desktopSidebar {
+    display: none;
+  }
+
+  /* Mobile header with hamburger. */
+  .mobileHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    padding: 12px 16px;
+    background-color: #13131a;
+    border-bottom: 1px solid #1e1e2e;
+  }
+
+  .hamburger {
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease;
+  }
+
+  .hamburger:hover {
+    background-color: #1e1e2e;
+  }
+
+  .mobileTitle {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    white-space: nowrap;
+  }
+
+  /* Backdrop behind the drawer. */
+  .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 200;
+  }
+
+  .backdropOpen {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Slide-in drawer. */
+  .drawer {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 201;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .drawerOpen {
+    transform: translateX(0);
+  }
+
+  .drawerClose {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .drawerClose:hover {
+    color: #cbd5e1;
+    background-color: #1e1e2e;
+  }
+}

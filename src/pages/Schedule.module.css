@@ -1,0 +1,109 @@
+.count {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.groupEmpty {
+  font-size: 0.8rem;
+  color: #334155;
+  padding: 4px 2px 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 11px 14px;
+  transition: border-color 0.15s ease;
+}
+
+.item:hover {
+  border-color: #2d2d45;
+}
+
+/* Status dot per bucket */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot_overdue {
+  background-color: #f87171;
+}
+
+.dot_today {
+  background-color: #fbbf24;
+}
+
+.dot_upcoming {
+  background-color: #818cf8;
+}
+
+.dot_muted {
+  background-color: #334155;
+}
+
+.itemTitle {
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.priorityBadge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background-color: #1e1e2e;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.statusBadge {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background-color: #1e1e2e;
+  color: #64748b;
+}
+
+.deadline {
+  font-size: 0.68rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.deadlineOverdue {
+  color: #f87171;
+}

@@ -1,0 +1,251 @@
+/* ── Summary stat cards ──────────────────────────────────────────── */
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.statCard {
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #475569;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1;
+}
+
+.statDanger {
+  color: #f87171;
+}
+
+.statNote {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* ── Horizontal status bars ──────────────────────────────────────── */
+
+.barList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.barRowLabel {
+  width: 90px;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.barRowTrack {
+  flex: 1;
+  height: 10px;
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.barRowFill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.fill_todo {
+  background-color: #475569;
+}
+
+.fill_in_progress {
+  background-color: var(--accent, #818cf8);
+}
+
+.fill_done {
+  background-color: #4ade80;
+}
+
+.barRowValue {
+  width: 90px;
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* ── Section header with toggle ──────────────────────────────────── */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.sectionHeader > :first-child {
+  margin-bottom: 0;
+}
+
+.toggle {
+  display: flex;
+  gap: 4px;
+}
+
+.toggleBtn {
+  background: transparent;
+  border: 1px solid #1e1e2e;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.toggleBtn:hover {
+  color: #cbd5e1;
+}
+
+.toggleActive {
+  border-color: var(--accent, #818cf8);
+  color: var(--accent, #818cf8);
+}
+
+/* ── Vertical bar chart ──────────────────────────────────────────── */
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 160px;
+  position: relative;
+}
+
+.bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.barTrack {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.barFill {
+  width: 60%;
+  min-height: 2px;
+  background-color: var(--accent, #818cf8);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.barCount {
+  font-size: 0.7rem;
+  color: #94a3b8;
+}
+
+.barLabel {
+  font-size: 0.65rem;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.chartEmpty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+/* ── Note ────────────────────────────────────────────────────────── */
+
+.note {
+  font-size: 0.72rem;
+  color: #475569;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ── Chips (priority / category) ─────────────────────────────────── */
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.chipCount {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  background-color: #1e1e2e;
+  border-radius: 9999px;
+  padding: 1px 8px;
+}
+
+.chipDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.priority_high {
+  background-color: #f87171;
+}
+
+.priority_medium {
+  background-color: #fb923c;
+}
+
+.priority_low {
+  background-color: #4ade80;
+}

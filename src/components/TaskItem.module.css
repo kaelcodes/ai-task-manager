@@ -1,0 +1,190 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 12px 14px;
+  transition: border-color 0.15s ease;
+  list-style: none;
+}
+
+.item:hover {
+  border-color: #2d2d45;
+}
+
+.itemDone {
+  opacity: 0.6;
+}
+
+/* ── Checkbox ─────────────────────────────────────────────────── */
+
+.checkbox {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #334155;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  padding: 0;
+}
+
+.checkbox:hover {
+  border-color: #818cf8;
+}
+
+.checkbox[aria-checked="true"] {
+  background-color: #818cf8;
+  border-color: #818cf8;
+}
+
+.checkmark {
+  font-size: 0.65rem;
+  color: #0f0f13;
+  line-height: 1;
+  font-weight: 700;
+}
+
+/* ── Content ──────────────────────────────────────────────────── */
+
+.content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.titleDone {
+  text-decoration: line-through;
+  color: #475569;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ── Badges ───────────────────────────────────────────────────── */
+
+.badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.priority_low {
+  background-color: #172a1a;
+  color: #4ade80;
+}
+
+.priority_medium {
+  background-color: #2a1f10;
+  color: #fb923c;
+}
+
+.priority_high {
+  background-color: #2a1018;
+  color: #f87171;
+}
+
+.statusChip {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background-color: #1e1e2e;
+  color: #94a3b8;
+}
+
+.categoryChip {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background-color: #1e1e38;
+  color: #818cf8;
+}
+
+.deadline {
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+.deadlineOverdue {
+  color: #f87171;
+}
+
+/* ── Actions ──────────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.btnGhost {
+  background: transparent;
+  border: none;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btnGhost:hover {
+  background-color: #1e1e2e;
+  color: #cbd5e1;
+}
+
+.confirmRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.confirmPrompt {
+  font-size: 0.75rem;
+  color: #f87171;
+}
+
+.btnDanger {
+  background: transparent;
+  border: 1px solid #7f1d1d;
+  color: #f87171;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btnDanger:hover {
+  background-color: #2a1018;
+}

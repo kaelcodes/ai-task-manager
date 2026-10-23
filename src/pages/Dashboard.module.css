@@ -1,0 +1,237 @@
+/* ── Stats grid ──────────────────────────────────────────────────── */
+
+.statsGrid {
+  display: grid;
+  /* Responsive: as many columns as fit at >=150px each, filling the row.
+     ~4 across on desktop, 2 on tablet, 1–2 on narrow/mobile — no overflow. */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.statCard {
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0; /* allow children to ellipsis instead of overflowing */
+}
+
+.statCardSkeleton {
+  height: 96px;
+  opacity: 0.4;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+/* Accent left-border variants */
+.statCardTodo {
+  border-left: 3px solid #475569;
+}
+
+.statCardInProgress {
+  border-left: 3px solid #818cf8;
+}
+
+.statCardDone {
+  border-left: 3px solid #4ade80;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #475569;
+  /* Single-word labels; never wrap, ellipsis if ever too narrow. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1;
+}
+
+.statNote {
+  font-size: 0.75rem;
+  color: #64748b;
+  /* Keep "43% done" on one line so the number and word never split awkwardly. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Narrow-width tuning (tablet / mobile) ───────────────────────── */
+@media (max-width: 640px) {
+  .statsGrid {
+    gap: 10px;
+  }
+  .statCard {
+    padding: 14px 14px;
+  }
+  .statValue {
+    font-size: 1.6rem;
+  }
+}
+
+/* ── Section header with action link ────────────────────────────── */
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* Override PageShell sectionTitle margin since we handle it in sectionHeader */
+.sectionHeader > :first-child {
+  margin-bottom: 0;
+}
+
+.viewAllBtn {
+  background: transparent;
+  border: none;
+  color: #818cf8;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 0;
+  transition: color 0.15s ease;
+}
+
+.viewAllBtn:hover {
+  color: #a5b4fc;
+}
+
+/* ── Active task preview list ────────────────────────────────────── */
+
+.previewList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.previewItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #13131a;
+  border: 1px solid #1e1e2e;
+  border-radius: 10px;
+  padding: 11px 14px;
+  transition: border-color 0.15s ease;
+}
+
+.previewItem:hover {
+  border-color: #2d2d45;
+}
+
+.previewItemSkeleton {
+  height: 44px;
+  opacity: 0.4;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+/* ── Priority dot ────────────────────────────────────────────────── */
+
+.priorityDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.priorityLow {
+  background-color: #4ade80;
+}
+
+.priorityMedium {
+  background-color: #fb923c;
+}
+
+.priorityHigh {
+  background-color: #f87171;
+}
+
+/* ── Preview item content ────────────────────────────────────────── */
+
+.previewTitle {
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.previewMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.priorityBadge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background-color: #1e1e2e;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.statusBadge {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background-color: #1e1e2e;
+  color: #64748b;
+}
+
+.deadlineBadge {
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+.deadlineOverdue {
+  color: #f87171;
+}
+
+/* ── Empty / CTA ─────────────────────────────────────────────────── */
+
+.createBtn {
+  background: transparent;
+  border: 1px dashed #334155;
+  color: #64748b;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  margin-top: 4px;
+}
+
+.createBtn:hover {
+  border-color: #818cf8;
+  color: #818cf8;
+}
+
+/* ── Skeleton pulse animation ────────────────────────────────────── */
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.15; }
+}
